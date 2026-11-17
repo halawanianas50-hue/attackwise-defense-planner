@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- App state (selection, ratings, custom defenses, language) lives in `src/lib/store.tsx` context persisted to localStorage — no backend needed for a single-user planning tool.
+- ATT&CK data is a curated Enterprise-only subset in `src/lib/attack-data.ts`; never add Mobile/ICS content.
+- Coverage math lives only in `src/lib/scoring.ts` (tested) so screens and the Word export agree.
